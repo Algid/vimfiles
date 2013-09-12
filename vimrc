@@ -20,11 +20,13 @@ set ignorecase
 "Pathogen https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
-"Rainbow Parentheses https://github.com/guns/vim-clojure-static
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+"Rainbow Parentheses https://github.com/kien/rainbow_parentheses.vim
+autocmd VimEnter * RainbowParenthesesToggle
+autocmd Syntax * RainbowParenthesesLoadRound
+autocmd Syntax * RainbowParenthesesLoadSquare
+autocmd Syntax * RainbowParenthesesLoadBraces
+autocmd Syntax * RainbowParenthesesLoadChevrons
+
 
 "Fireplace https://github.com/tpope/vim-fireplace
 
@@ -39,6 +41,8 @@ set backspace=2
 "}}}
 
 "Theme Stuff {{{
+
+"Solarized https://github.com/altercation/vim-colors-solarized
 set background=dark
 colorscheme solarized
 set gfn=Courier_New:h12
