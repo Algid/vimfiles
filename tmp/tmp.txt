@@ -1,0 +1,1 @@
+This directory is for the temp files that vim creates while a file is being editted.
