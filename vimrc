@@ -44,7 +44,7 @@ set backspace=2
 
 "Solarized https://github.com/altercation/vim-colors-solarized
 set background=dark
-colorscheme solarized
+colorscheme merbivore
 set gfn=Courier_New:h12
 set guioptions-=T
 set guioptions-=r
