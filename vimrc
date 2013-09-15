@@ -53,8 +53,19 @@ set go-=L
 
 "File location/backup {{{
 set backup
-set backupdir=~/vimfiles/backup
-set directory=~/vimfiles/tmp
+
+if isdirectory("~/.vim/backup")
+    set backupdir=~/.vim/backup
+elseif isdirectory("~/vimfiles/backup")
+    set backupdir=~/vimfiles/backup
+endif
+
+if isdirectory("~/.vim/tmp")
+    set directory=~/.vim/tmp
+elseif isdirectory("~/vimfiles/tmp")
+    set directory=~/vimfiles/tmp
+endif
+
 "}}}
 
 "Status Line {{{
