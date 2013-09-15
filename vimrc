@@ -52,11 +52,12 @@ set go-=L
 "}}}
 
 "File location/backup {{{
-set backup
 
 if isdirectory("~/.vim/backup")
+    set backup
     set backupdir=~/.vim/backup
 elseif isdirectory("~/vimfiles/backup")
+    set backup
     set backupdir=~/vimfiles/backup
 endif
 
