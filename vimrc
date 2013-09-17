@@ -27,7 +27,6 @@ autocmd Syntax * RainbowParenthesesLoadSquare
 autocmd Syntax * RainbowParenthesesLoadBraces
 autocmd Syntax * RainbowParenthesesLoadChevrons
 
-
 "Fireplace https://github.com/tpope/vim-fireplace
 
 
