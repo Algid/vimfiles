@@ -88,9 +88,6 @@ set statusline+=\ %p%%
 inoremap jk <esc>
 inoremap <esc> <nop>
 
-"Automatically adds closing curly brackets
-inoremap {<cr> {<cr>}<esc>O
-
 "Selected word is changed to all uppercase
 nnoremap <leader>u viwU<esc>e
 
