@@ -123,7 +123,6 @@ set statusline+=%04l/%04L
 set statusline+=\ %p%%
 "}}}
 
-
 "Operator pending Mappings{{{
 "Operator pending in next/previous parentheses
 onoremap in( :<c-u>normal! f(vi(<cr>
