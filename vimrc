@@ -39,6 +39,46 @@ set shiftwidth=4
 set backspace=2
 "}}}
 
+"Key Mappings {{{
+"jk to exit insert mode, esc no longer functions
+inoremap jk <esc>
+
+"Automatically adds closing curly brackets
+inoremap {<cr> {<cr>}<esc>O
+
+"Selected word is changed to all uppercase
+nnoremap <leader>u viwU<esc>e
+
+"Edit and Source the vimrc file (for making changes quickly)
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"Open file through explorer
+nnoremap <leader>o :browse confirm e<cr>
+
+"Moving to beginning/end of line is uppercase of left/right
+nnoremap H 0
+nnoremap L $
+vnoremap H 0
+vnoremap L $
+nnoremap 0 <nop>
+nnoremap $ <nop>
+vnoremap 0 <nop>
+vnoremap $ <nop>
+
+"Paste from windows clipboard
+nnoremap <leader>p "+gp
+nnoremap <leader>P "+gP
+
+"surround with quotes
+nnoremap <leader>" viw<esc>`<i"<esc>`>la"<esc>
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+
+"Allow tab to work in all modes
+vnoremap <tab> >
+nnoremap <tab> >>
+"}}}
+
 "Theme Stuff {{{
 
 "Solarized https://github.com/altercation/vim-colors-solarized
@@ -83,46 +123,6 @@ set statusline+=%04l/%04L
 set statusline+=\ %p%%
 "}}}
 
-"Key Mappings {{{
-"jk to exit insert mode, esc no longer functions
-inoremap jk <esc>
-inoremap <esc> <nop>
-
-"Automatically adds closing curly brackets
-inoremap {<cr> {<cr>}<esc>O
-
-"Selected word is changed to all uppercase
-nnoremap <leader>u viwU<esc>e
-
-"Edit and Source the vimrc file (for making changes quickly)
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-"Open file through explorer
-nnoremap <leader>o :browse confirm e<cr>
-
-"Moving to beginning/end of line is uppercase of left/right
-nnoremap H 0
-nnoremap L $
-vnoremap H 0
-vnoremap L $
-nnoremap 0 <nop>
-nnoremap $ <nop>
-vnoremap 0 <nop>
-vnoremap $ <nop>
-
-"Paste from windows clipboard
-nnoremap <leader>p "+gp
-nnoremap <leader>P "+gP
-
-"surround with quotes
-nnoremap <leader>" viw<esc>`<i"<esc>`>la"<esc>
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
-
-"Allow tab to work in all modes
-vnoremap <tab> >
-nnoremap <tab> >>
-"}}}
 
 "Operator pending Mappings{{{
 "Operator pending in next/previous parentheses
