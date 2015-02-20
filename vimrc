@@ -43,9 +43,6 @@ set backspace=2
 "jk to exit insert mode, esc no longer functions
 inoremap jk <esc>
 
-"Automatically adds closing curly brackets
-inoremap {<cr> {<cr>}<esc>O
-
 "Selected word is changed to all uppercase
 nnoremap <leader>u viwU<esc>e
 
