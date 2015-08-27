@@ -1,5 +1,5 @@
 "General{{{
-set relativenumber
+set number
 set numberwidth=2
 
 let mapleader=","
@@ -29,7 +29,6 @@ autocmd Syntax * RainbowParenthesesLoadChevrons
 
 "Fireplace https://github.com/tpope/vim-fireplace
 
-
 "}}}
 
 "Tab Stuff {{{
@@ -40,8 +39,11 @@ set backspace=2
 "}}}
 
 "Key Mappings {{{
-"jk to exit insert mode, esc no longer functions
+"jk to exit insert mode
 inoremap jk <esc>
+
+"Copy filename to unamed register
+nnoremap <leader>cf :let @" = expand("%")<cr>
 
 "Selected word is changed to all uppercase
 nnoremap <leader>u viwU<esc>e
@@ -53,16 +55,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 "Open file through explorer
 nnoremap <leader>o :browse confirm e<cr>
 
-"Moving to beginning/end of line is uppercase of left/right
-nnoremap H 0
-nnoremap L $
-vnoremap H 0
-vnoremap L $
-nnoremap 0 <nop>
-nnoremap $ <nop>
-vnoremap 0 <nop>
-vnoremap $ <nop>
-
 "Paste from windows clipboard
 nnoremap <leader>p "+gp
 nnoremap <leader>P "+gP
@@ -71,16 +63,13 @@ nnoremap <leader>P "+gP
 nnoremap <leader>" viw<esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 
-"Allow tab to work in all modes
-vnoremap <tab> >
-nnoremap <tab> >>
 "}}}
 
 "Theme Stuff {{{
 
 "Solarized https://github.com/altercation/vim-colors-solarized
 set background=dark
-colorscheme merbivore
+colorscheme solarized
 set gfn=Courier_New:h12
 set guioptions-=T
 set guioptions-=r
