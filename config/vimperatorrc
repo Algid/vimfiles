@@ -1,0 +1,4 @@
+nmap J gT
+nmap K gt
+nmap x :q
+:set hintchars=vcxzdsaewq

@@ -59,6 +59,9 @@ nnoremap <leader>o :browse confirm e<cr>
 nnoremap <leader>p "+gp
 nnoremap <leader>P "+gP
 
+"Remove search highlighting
+nnoremap <leader>cl :nohl<cr>
+
 "surround with quotes
 nnoremap <leader>" viw<esc>`<i"<esc>`>la"<esc>
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
@@ -70,6 +73,7 @@ vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 "Solarized https://github.com/altercation/vim-colors-solarized
 set background=dark
 colorscheme solarized
+
 set gfn=Courier_New:h12
 set guioptions-=T
 set guioptions-=r
@@ -98,7 +102,7 @@ endif
 "Show the status all the time
 set laststatus=2
 "Display the path to the file on the left
-set statusline=%.25F
+set statusline=%F
 "Display the filetype
 set statusline+=\ %y
 "Shift to the right
@@ -155,6 +159,3 @@ augroup filetype_vim
 augroup END
 "}}}
 "}}}
-
-"Create a file when opened for the first time"
-autocmd BufNewFile * :write
