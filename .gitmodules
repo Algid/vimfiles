@@ -22,3 +22,9 @@
 	path = bundle/vim_colors
 	url = https://github.com/squil/vim_colors
 	ignore = dirty
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
